@@ -5,7 +5,7 @@
   */
 int main(void)
 {
-	int count;
+int count;
 long i, j, key;
 long m, n, p, carry;
 
@@ -38,7 +38,7 @@ long m, n, p, carry;
 			printf("%lu0%lu", key, p);
 		if (count != 98)
 			printf(", ");
-	
+		count++;
 	}
 	putchar('\n');
 	return (0);
