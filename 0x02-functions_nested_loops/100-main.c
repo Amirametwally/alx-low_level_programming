@@ -7,12 +7,12 @@
  */
 int main(void)
 {
-    times_table();
-    _putchar('\n');
-    times_table();
-    _putchar('\n');
-    times_table();
-    _putchar('\n');
-    times_table();
-    return (0);
+	times_table(3);
+	_putchar('\n');
+	times_table(5);
+	_putchar('\n');
+	times_table(98);
+	_putchar('\n');
+	times_table(12);
+	return (0);
 }
