@@ -14,16 +14,3 @@ int Palind(char *s, int i, int r){
      }
      return 0;
  }
-
-int main()
-{
-    char s[] = {"abbba"} ;
-    int in=0;
-    int i=0,n=sizeof(s)/sizeof(s[0]);
-
-    if(isPalindrome(s,i,strlen(s) - 1))
-         printf("%s is palindrome",s);
-    else
-        printf("%s is not palindrome",s);
-
- }
