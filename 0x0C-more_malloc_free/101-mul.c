@@ -17,8 +17,13 @@ int main(int argc, char *argv[])
         return 98;
     }
 
-    char *num1 = argv[1];
-    char *num2 = argv[2];
+    char *num1 ;
+
+    num1 = argv[1];
+
+    char *num2 ;
+
+    num2 = argv[2];
 
     int i ;
     for (i = 0; num1[i] != '\0'; i++)
@@ -29,10 +34,10 @@ int main(int argc, char *argv[])
             return 98;
         }
     }
-    int i;
-    for ( i = 0; num2[i] != '\0'; i++)
+    int j;
+    for ( j = 0; num2[j] != '\0'; j++)
     {
-        if (!isdigit(num2[i]))
+        if (!isdigit(num2[j]))
         {
             printf("Error\n");
             return 98;
@@ -47,8 +52,11 @@ int main(int argc, char *argv[])
 
 int multiply(char *num1, char *num2)
 {
-    int len1 = 0;
-    int len2 = 0;
+    int len1 ;
+    len1 = 0;
+
+    int len2 ;
+    len2 = 0;
 
     while (num1[len1] != '\0')
         len1++;
@@ -62,18 +70,24 @@ int multiply(char *num1, char *num2)
         exit(98);
     }
 
-    int carry = 0;
+    int carry ;
+    carry = 0;
+    
     int i ;
     for (i = len1 - 1; i >= 0; i--)
     {
-        int n1 = num1[i] - '0';
+        int n1 ;
+
+        n1 = num1[i] - '0';
         
         int j;
         for (j = len2 - 1; j >= 0; j--)
         {
-            int n2 = num2[j] - '0';
+            int n2 ;
+            n2 = num2[j] - '0';
 
-            int sum = (n1 * n2) + res[i + j + 1] + carry;
+int sum ;
+            sum = (n1 * n2) + res[i + j + 1] + carry;
             carry = sum / 10;
             res[i + j + 1] = sum % 10;
         }
@@ -85,8 +99,12 @@ int multiply(char *num1, char *num2)
         }
     }
 
-    int result = 0;
-    int idx = 0;
+    
+    int result;
+    result = 0;
+ 
+    int idx;
+    idx = 0;
 
     while (res[idx] == 0 && idx < len1 + len2)
         idx++;
