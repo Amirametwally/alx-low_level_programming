@@ -28,7 +28,7 @@ str->age = age;
 str->owner = malloc(strlen(owner) + 1);
 if (!str->owner)
 {
-free(str->owner);
+free(str->name);
 free(str);
 return (NULL);
 }
