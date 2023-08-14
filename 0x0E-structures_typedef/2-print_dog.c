@@ -13,10 +13,9 @@ printf("nothing\n");
 
 if (d != NULL)
 {
-d->name ? printf("Name: %s\n", d->name) : printf("Name: (nil)\n");
-d->age >= 0 ? printf("Age: %6f\n", d->age) : printf("Age: (nil)\n");
-d->owner ? printf("Owner: %s\n", d->owner) : printf("Owner: (nil)\n");
-
+printf("Name: %s\n", d->name ? d->name : "(nil)");
+printf("Age: %f\n", d->age);
+printf("Owner: %s\n", d->owner ? d->owner : "(nil)");
 }
 }
 
