@@ -5,7 +5,7 @@
  * get_op_func -selects the correct function
  * to perform the operation
  * @s: operator
- * 
+ *
  * Return: pointer to the function
  */
 int (*get_op_func(char *s))(int, int)
