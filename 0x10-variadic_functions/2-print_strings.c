@@ -15,6 +15,7 @@ va_start(arr, n);
 for (i = 0; i < n; i++)
 {
 str = va_arg(arr, char*);
+
 printf("%s%s", str == NULL ? "(nil)" : str,
 (i < n - 1 && separator != NULL) ? separator : "");
 }
