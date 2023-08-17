@@ -21,7 +21,7 @@ printf("%d", va_arg(ptr, int));
 i++;
 if (i < n && (separator))
 {
-printf("%s", separator);    
+printf("%s", separator);
 }
 }
 va_end(ptr);
