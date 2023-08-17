@@ -2,7 +2,6 @@
 #define VARIADIC_FUNCTIONS_H
 
 #include <stdio.h>
-#include <varargs.h>
 #include <string.h>
 #include <stdlib.h>
 #include <stdarg.h>
