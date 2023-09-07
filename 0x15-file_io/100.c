@@ -11,6 +11,6 @@
  */
 void print_abi(unsigned char *e_ident)
 {
-	printf("  ABI Version:                       %ld\n",
+	printf("  ABI Version:                       %li\n",
 				 e_ident[EI_ABIVERSION]);
 }
