@@ -117,7 +117,7 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
  * close_elf - Closes an ELF file.
  * @elf: The file descriptor of the ELF file.
  *
- * Description: If the file cannot be closed - exit code 98.
+ * Description: If the file cannot be closed - Exit code 98.
  */
 void close_elf(int elf)
 {
@@ -125,7 +125,7 @@ void close_elf(int elf)
 	{
 		dprintf(STDERR_FILENO,
 						"Error: Can't close fd %d\n", elf);
-		exit(98);
+		_Exit(98);
 	}
 }
 
@@ -138,7 +138,7 @@ void close_elf(int elf)
  * Return: 0 on success.
  *
  * Description: If the file is not an ELF File or
- * the function fails - exit code 98.
+ * the function fails - Exit code 98.
  */
 
 int main(int argc __attribute__((unused)), char *argv[])
@@ -150,14 +150,14 @@ int main(int argc __attribute__((unused)), char *argv[])
 	if (o == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
-		exit(98);
+		_Exit(98);
 	}
 	header = malloc(sizeof(Elf64_Ehdr));
 	if (header == NULL)
 	{
 		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: Can't read file %s\n", argv[1]);
-		exit(98);
+		_Exit(98);
 	}
 	r = read(o, header, sizeof(Elf64_Ehdr));
 	if (r == -1)
@@ -165,7 +165,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 		free(header);
 		close_elf(o);
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
-		exit(98);
+		_Exit(98);
 	}
 
 	check_elf(header->e_ident);
