@@ -1,6 +1,15 @@
 #include "main.h"
 #include "elf.h"
 
+/**
+ * print_abi - Prints the ABI version of an ELF header.
+ * @e_ident: A pointer to an array containing the ELF ABI version.
+ */
+void print_abi(unsigned char *e_ident)
+{
+	printf("  ABI Version:                       %i\n",
+				 e_ident[EI_ABIVERSION]);
+}
 
 /**
  * print_osabi - Prints the OS/ABI of an ELF header.
