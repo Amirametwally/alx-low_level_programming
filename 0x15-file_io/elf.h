@@ -1,11 +1,15 @@
 #ifndef ELF_H
 #define ELF_H
 
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <string>
+
 #include <elf.h>
 #include <sys/types.h>
-#include <stdlib.h>
 #include <sys/stat.h>
-#include "main.h"
 
 void check_elf(unsigned char *e_ident);
 void print_magic(unsigned char *e_ident);
