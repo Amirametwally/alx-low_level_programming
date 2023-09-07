@@ -3,6 +3,7 @@
 
 #include <elf.h>
 #include <sys/types.h>
+#include <stdlib.h>
 #include <sys/stat.h>
 #include "main.h"
 
