@@ -1,6 +1,7 @@
+#include <stdlib.h>
 #include "main.h"
 #include "elf.h"
-#include <stdlib.h>
+
 
 /**
  * print_abi - Prints the ABI version of an ELF header.
@@ -8,7 +9,7 @@
  */
 void print_abi(unsigned char *e_ident)
 {
-	printf("  ABI Version:                       %ld\n",
+	printf("  ABI Version:                       %i\n",
 				 e_ident[EI_ABIVERSION]);
 }
 
