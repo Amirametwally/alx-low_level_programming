@@ -1,12 +1,1 @@
-def is_palindrome(num):
-	return str(num) == str(num)[::-1]
-
-max_palindrome = 0
-
-for j in range(999, 99, -1):
-	for k in range(j, 99, -1):
-		prod = j * k
-		if is_palindrome(prod) and prod > max_palindrome:
-			max_palindrome = prod
-
-print(max_palindrome)
+906609
