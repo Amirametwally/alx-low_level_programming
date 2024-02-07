@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
- * exponentialSearch - exponential search
+ * exponential_search - function that searches for a value in a sorted array of
+ * integers using the Exponential search algorithm
  * @array: array to search
  * @size: size of array
  * @value: value to search for
